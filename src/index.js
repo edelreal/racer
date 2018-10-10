@@ -9,6 +9,8 @@ document.body.appendChild( renderer.domElement )
 
 var geometry = new THREE.DodecahedronGeometry( 1, 1)
 var material = new THREE.MeshStandardMaterial( { color: 0xffffff} )
+material.roughness = 0.01
+
 var cube = new THREE.Mesh( geometry, material )
 scene.add( cube )
 
