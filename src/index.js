@@ -7,14 +7,19 @@ var renderer = new THREE.WebGLRenderer()
 renderer.setSize( window.innerWidth, window.innerHeight )
 document.body.appendChild( renderer.domElement )
 
-var geometry = new THREE.BoxGeometry( 1, 1, 1 )
-var material = new THREE.MeshStandardMaterial( { color: 0x550000} )
+var geometry = new THREE.DodecahedronGeometry( 1, 1)
+var material = new THREE.MeshStandardMaterial( { color: 0xffffff} )
 var cube = new THREE.Mesh( geometry, material )
 scene.add( cube )
 
-var light = new THREE.PointLight( 0xff0000, 1, 100 );
-light.position.set( 10, 10, 10 );
-scene.add( light );
+var light1 = new THREE.PointLight( 0xff0000, 1, 100 )
+light1.position.set( 20, 8, 10 )
+scene.add( light1 )
+
+var light2 = new THREE.PointLight( 0x0000ff, 1, 100 )
+light2.position.set( -20, 8, 10 )
+scene.add( light2 )
+
 
 camera.position.z = 5
 
