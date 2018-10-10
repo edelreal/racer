@@ -8,13 +8,17 @@ renderer.setSize( window.innerWidth, window.innerHeight )
 document.body.appendChild( renderer.domElement )
 
 var geometry = new THREE.BoxGeometry( 1, 1, 1 )
-var material = new THREE.MeshBasicMaterial( { color: 0x550000} )
+var material = new THREE.MeshStandardMaterial( { color: 0x550000} )
 var cube = new THREE.Mesh( geometry, material )
 scene.add( cube )
 
+var light = new THREE.PointLight( 0xff0000, 1, 100 );
+light.position.set( 10, 10, 10 );
+scene.add( light );
+
 camera.position.z = 5
 
-var xRotationDelta = 0
+var xRotationDelta = 0.0001
 var yRotationDelta = 0
 
 var animate = function () {
