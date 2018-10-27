@@ -1,5 +1,5 @@
 {
-  "name": "racer",
+  "name": "webpack-threejs-kickstart",
   "version": "0.1.0",
   "description": "ThreeJS Kickstart.",
   "main": "index.js",
